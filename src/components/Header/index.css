@@ -1,11 +1,49 @@
 .blog_header{
+    display: flex;
+    box-sizing:border-box;
     position: fixed;
     top: 0;
+    padding: 0 20px;
     height: 75px;
     width: 100vw;
-    color: #666;
+    color: #404040;
+    /* line-height: 75px; */
+    font-size: 20px;
     box-shadow: 0 1px 40px -8px rgba(0,0,0,.5);
     background-color: #404040;
     transition: all 0.5s;
     z-index: 2;
+}
+
+.blog_header_logo{
+    width: 200px;
+    background-color: red;
+}
+
+.blog_header_nav{
+    flex:1;
+    background-color: yellow;
+}
+
+.blog_header_nav li{
+    width: 80px;
+    height: 30px;
+    list-style:none;
+}
+
+.blog_header_nav a{
+    text-decoration:none;
+}
+
+.blog_header_ul{
+    display: flex;
+}
+
+.blog_header_category_ul{
+    border: 1px solid black;
+}
+
+.blog_header_login{
+    width: 200px;
+    background-color: black;
 }
