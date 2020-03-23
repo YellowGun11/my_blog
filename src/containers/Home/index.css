@@ -1,0 +1,29 @@
+.blog_home_bg{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* visibility: hidden; */
+}
+.blog_home_bg>img{
+    width: 100%;
+    height: 100%;
+}
+.blog_home_title{
+    /* width: calc(100vw-5x); */
+    height: 100vh;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.blog_home_title_text{
+    margin-top: 300px;
+}
+
+.blog_home_content{
+    height: 1500px;
+    width: calc(100vw-5x);
+    background-color: red;
+}
