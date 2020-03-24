@@ -8,21 +8,36 @@
     width: 100vw;
     color: #404040;
     /* line-height: 75px; */
-    font-size: 20px;
-    box-shadow: 0 1px 40px -8px rgba(0,0,0,.5);
-    background-color: #404040;
+    /* box-shadow: 0 1px 40px -8px rgba(0,0,0,.5); */
+    background-color: rgba(0,0,0,.1);
     transition: all 0.5s;
     z-index: 2;
 }
 
+/* logo模块 */
 .blog_header_logo{
     width: 200px;
     background-color: red;
 }
 
+/* 导航模块 */
 .blog_header_nav{
+    position: relative;
     flex:1;
+    height: 100%;
+    line-height: 75px;
+    visibility: hidden;
+    transition: all 0.1s;
     background-color: yellow;
+}
+
+.blog_header_ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 100%;
 }
 
 .blog_header_nav li{
@@ -33,16 +48,25 @@
 
 .blog_header_nav a{
     text-decoration:none;
+    color: #404040;
 }
 
-.blog_header_ul{
-    display: flex;
+/* 导航中的icon */
+.blog_header_nav_icon{
+    color: #404040;
 }
 
+/* 二级分类导航 */
 .blog_header_category_ul{
+    line-height: 16px;
     border: 1px solid black;
 }
 
+.blog_header_category_ul>li{
+    line-height: 30px;
+}
+
+/* 登录用户模块 */
 .blog_header_login{
     width: 200px;
     background-color: black;

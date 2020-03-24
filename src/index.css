@@ -17,6 +17,14 @@ ul,li{
   margin: 0;
 }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar{
   width: 5px;/* 纵向滚动条*/
   height: 5px;/* 横向滚动条 */
