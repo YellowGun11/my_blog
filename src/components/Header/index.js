@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { HomeOutlined } from '@ant-design/icons';
 import './index.css';
 import logo from '../../assets/img/logoko.png';
+import user from '../../assets/img/user.jpeg';
 
 export default function Header(props) {
 
@@ -66,7 +67,14 @@ export default function Header(props) {
                     </li>
                 </ul>
             </nav>
-            <div className="blog_header_login">login11111111111</div>
+            <div className="blog_header_login">
+                {/* <div className="blog_header_login_box blog_header_login_icon_box">
+                    <i className="iconfont blog_header_login_icon">&#xe727;</i>
+                </div> */}
+                <div className="blog_header_login_box blog_header_login_user_box">
+                    <img src={user} alt='user' className="blog_header_login_user" />
+                </div>
+            </div>
         </div>
     )
 }
