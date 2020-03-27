@@ -11,8 +11,8 @@ export default class Index extends Component {
                 <Suspense fallback={<div>Loading</div>}>
                     <BrowserRouter>
                         <Switch>
-                            <Route exact path='/' component={App} />
                             <Route path='/login' component={Login} />
+                            <Route path='/' component={App} />
                         </Switch>
                     </BrowserRouter>
                 </Suspense>

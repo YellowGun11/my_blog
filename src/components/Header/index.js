@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { HomeOutlined } from '@ant-design/icons';
+// import { HomeOutlined } from '@ant-design/icons';
 import './index.css';
 import logo from '../../assets/img/logoko.png';
 import user from '../../assets/img/user.jpeg';
@@ -9,10 +9,8 @@ export default function Header(props) {
 
     useEffect(() => {
         window.addEventListener('scroll', handleSetVisible);
-        console.log(1)
         return () => {
-            console.log(11)
-            window.addEventListener('scroll', handleSetVisible);
+            window.removeEventListener('scroll', handleSetVisible);
         };
     })
 
@@ -24,6 +22,8 @@ export default function Header(props) {
         let scrollTop = document.documentElement.scrollTop;  //滚动条滚动高度
         const blog_header = document.getElementsByClassName('blog_header')[0];
         const blog_header_ul = document.getElementsByClassName('blog_header_ul')[0];
+        // console.log('scrollTop')
+        // console.log(scrollTop)
         if (scrollTop > 0) {
             blog_header.style.backgroundColor = 'rgba(255,255,255,.95)';
             blog_header.style.boxShadow = '0 1px 40px -8px rgba(0,0,0,.5)';
@@ -50,20 +50,23 @@ export default function Header(props) {
                         <Link to='/' exact="true"><i className="iconfont blog_header_nav_icon">&#xe6be;</i>主页</Link>
                     </li>
                     <li className='blog_header_nav_category'>
-                        <Link to='/login' className="blog_header_nav_category_text"><i className="iconfont blog_header_nav_icon">&#xe64e;</i>分类</Link>
+                        <Link className="blog_header_nav_category_text"><i className="iconfont blog_header_nav_icon">&#xe64e;</i>分类</Link>
                         <ul className="blog_header_category_ul">
-                            <li><Link><i className="iconfont blog_header_nav_icon">&#xe670;</i>编程</Link></li>
-                            <li><Link><i className="iconfont blog_header_nav_icon">&#xe60d;</i>动漫</Link></li>
-                            <li><Link><i className="iconfont blog_header_nav_icon">&#xe6bf;</i>教程</Link></li>
-                            <li><Link><i className="iconfont blog_header_nav_icon">&#xe65a;</i>生活</Link></li>
-                            <li><Link><i className="iconfont blog_header_nav_icon">&#xe6bd;</i>兴趣</Link></li>
+                            <li><Link to='/category/code'><i className="iconfont blog_header_nav_icon">&#xe670;</i>编程</Link></li>
+                            <li><Link to='/category/anime'><i className="iconfont blog_header_nav_icon">&#xe60d;</i>动漫</Link></li>
+                            <li><Link to='/category/course'><i className="iconfont blog_header_nav_icon">&#xe6bf;</i>教程</Link></li>
+                            <li><Link to='/category/life'><i className="iconfont blog_header_nav_icon">&#xe65a;</i>生活</Link></li>
+                            <li><Link to='/category/hobby'><i className="iconfont blog_header_nav_icon">&#xe6bd;</i>兴趣</Link></li>
                         </ul>
                     </li>
                     <li>
-                        <Link><i className="iconfont blog_header_nav_icon">&#xe677;</i>关于</Link>
+                        <Link to='/about'><i className="iconfont blog_header_nav_icon">&#xe677;</i>关于</Link>
                     </li>
                     <li>
-                        <Link><i className="iconfont blog_header_nav_icon">&#xe624;</i>写文章</Link>
+                        <Link to='/write'><i className="iconfont blog_header_nav_icon">&#xe624;</i>写文章</Link>
+                    </li>
+                    <li>
+                        <Link to='/login'><i className="iconfont blog_header_nav_icon">&#xe624;</i>写文章</Link>
                     </li>
                 </ul>
             </nav>
