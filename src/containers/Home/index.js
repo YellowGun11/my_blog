@@ -1,7 +1,18 @@
 import React, { Component } from 'react'
 import './index.css'
 
+import { get } from '../../utils/request'
+
+// import { fetch } from 'react';
+
 export default class Home extends Component {
+
+    componentDidMount(){
+        get('/api/user').then(res=>{
+            console.log(res)
+        })
+    }
+
     render() {
         return (
             <div className="blog_home">

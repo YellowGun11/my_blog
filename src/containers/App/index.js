@@ -9,11 +9,11 @@ const Write = React.lazy(() => import('../Write'))
 
 export default function App(props) {
 
-    const { match } = props;
+    const { match, location } = props;
     return (
         <div>
             <Suspense fallback={<div>Loading</div>}>
-                <Header />
+                <Header location={location} />
                 <Route path={match.url} exact component={Home} ></Route>
                 <Route path='/category/:name' exact component={Category} ></Route>
                 <Route path='/about'exact component={About} ></Route>

@@ -8,10 +8,22 @@ import user from '../../assets/img/user.jpeg';
 export default function Header(props) {
 
     useEffect(() => {
-        window.addEventListener('scroll', handleSetVisible);
-        return () => {
-            window.removeEventListener('scroll', handleSetVisible);
-        };
+        const { location } = props;
+        const { pathname } = location;
+        if (pathname === '/') {
+            window.addEventListener('scroll', handleSetVisible);
+            return () => {
+                window.removeEventListener('scroll', handleSetVisible);
+            };
+        } else {
+            const blog_header = document.getElementsByClassName('blog_header')[0];
+            const blog_header_ul = document.getElementsByClassName('blog_header_ul')[0];
+            blog_header.style.backgroundColor = 'rgba(255,255,255,.95)';
+            blog_header.style.boxShadow = '0 1px 40px -8px rgba(0,0,0,.5)';
+            blog_header.style.color = '#666';
+            blog_header_ul.style.visibility = "visible";
+            blog_header_ul.style.transform = "translate(-80%, -50%)";
+        }
     })
 
     const handleSetVisible = (event) => {
