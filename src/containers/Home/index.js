@@ -1,19 +1,27 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux"
+import { actions } from "../../redux/modules/list";
 import './index.css'
-
-import { get } from '../../utils/request'
+// import { get } from '../../utils/request'
+import ListView from '../../components/ListView';
 
 // import { fetch } from 'react';
 
-export default class Home extends Component {
+class Home extends Component {
 
-    componentDidMount(){
-        get('/api/user').then(res=>{
-            console.log(res)
-        })
+    componentDidMount() {
+        // get('/api/user').then(res=>{
+        //     console.log(res)
+        // })
+        this.props.fetchAllLists();
     }
 
     render() {
+        // const data = []
+        console.log(1)
+        console.log(this.props.listData);
+        console.log(1)
         return (
             <div className="blog_home">
                 <div className="blog_home_bg" />
@@ -27,3 +35,18 @@ export default class Home extends Component {
         )
     }
 }
+
+const mapStateToProps = (state, props) => {
+    return {
+        listData: state.list
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    console.log(dispatch)
+    return {
+        ...bindActionCreators(actions, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

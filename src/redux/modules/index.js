@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import app from "./app";
 import auth from "./auth";
+import list from "./list"
 // import comments, { getCommentIdsByPost, getCommentById } from "./comments";
 // import posts, { getPostIds, getPostById } from "./posts";
 // import users, { getUserById } from "./users";
@@ -9,6 +10,7 @@ import auth from "./auth";
 const rootReducer = combineReducers({
   app,
   auth,
+  list
   // ui,
   // posts,
   // comments,
