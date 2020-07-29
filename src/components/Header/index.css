@@ -1,0 +1,139 @@
+.blog_header{
+    display: flex;
+    box-sizing:border-box;
+    position: fixed;
+    top: 0;
+    padding: 0 20px;
+    height: 75px;
+    width: 100vw;
+    color: #404040;
+    /* line-height: 75px; */
+    /* box-shadow: 0 1px 40px -8px rgba(0,0,0,.5); */
+    background-color: rgba(0,0,0,.1);
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+/* logo模块 */
+.blog_header_logo, .blog_header_logo img{
+    width: 200px;
+}
+.blog_header_logo img{
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* 导航模块 */
+.blog_header_nav{
+    position: relative;
+    flex:1;
+    height: 100%;
+    line-height: 75px;
+}
+
+.blog_header_ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    display: flex;
+    height: 100%;
+    visibility: hidden;
+    transition: hidden 0.1s;
+    transition: transform 0.3s linear;
+}
+
+.blog_header_nav li{
+    width: 80px;
+    height: 30px;
+    list-style:none;
+}
+
+.blog_header_nav a{
+    text-decoration:none;
+    color: #404040;
+}
+
+/* 导航中的icon */
+.blog_header_nav_icon{
+    color: #404040;
+    margin-right: 5px;
+}
+
+/* 二级分类导航 */
+.blog_header_nav_category{
+    position: relative;
+}
+
+.blog_header_category_ul{
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    line-height: 16px;
+    background-color: rgba(255,255,255,.95);
+    border-radius: 5px;
+    box-shadow: 0 1px 40px -8px rgba(0,0,0,.5);
+    visibility: hidden;
+    transition: all 0.2s ease-in;
+    /* display: none; */
+}
+
+.blog_header_category_ul:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+}
+
+.blog_header_nav_category_text:hover + .blog_header_category_ul{
+    /* display: block; */
+    visibility: visible;
+    top: 60px;
+}
+
+.blog_header_category_ul:hover{
+    /* display: block; */
+    visibility: visible;
+    top: 60px;
+}
+
+.blog_header_category_ul>li:hover a,.blog_header_category_ul>li:hover .blog_header_nav_icon {
+    color: rgba(254,150,0);
+    /* background-color: rgba(254,150,0); */
+}
+
+.blog_header_category_ul>li{
+    line-height: 30px;
+    text-align: center;
+}
+
+/* 登录用户模块 */
+.blog_header_login{
+    position: relative;
+    width: 200px;
+    /* border: 1px solid red; */
+}
+.blog_header_login_box{
+    position: absolute;
+    right: 0px;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+    text-align: center;
+    /* border-radius: 50%;
+    overflow: hidden; */
+}
+.blog_header_login_icon{
+    font-size: 50px;
+    color: black;
+}
+.blog_header_login_user{
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
