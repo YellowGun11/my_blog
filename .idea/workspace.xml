@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed17eea3-34f4-420c-b8a1-492e5c91b23c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Home/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="ed17eea3-34f4-420c-b8a1-492e5c91b23c" name="Default" comment="a little" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,17 +47,44 @@
       <option name="presentableId" value="Default" />
       <updated>1580885150232</updated>
       <workItem from="1580885154201" duration="102000" />
-      <workItem from="1596030850923" duration="1931000" />
+      <workItem from="1596030850923" duration="2232000" />
     </task>
+    <task id="LOCAL-00001" summary="a little">
+      <created>1596032999657</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596032999657</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a little" />
+    <option name="LAST_COMMIT_MESSAGE" value="a little" />
   </component>
   <component name="WindowStateProjectService">
     <state x="687" y="269" key="#ESLint" timestamp="1596031165004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="269" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1596031165004" />
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596033058007">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596033058007" />
   </component>
 </project>
