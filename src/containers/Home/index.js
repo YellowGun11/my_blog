@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux"
 import { actions } from "../../redux/modules/list";
+import boxPic from "../../assets/img/home_bg.jpg";
 import './index.css'
 // import { get } from '../../utils/request'
 import ListView from '../../components/ListView';
@@ -29,7 +30,12 @@ class Home extends Component {
                     <h1 className="blog_home_title_text">Welocome To YellowGun11's Blog!</h1>
                 </div>
                 <div className="blog_home_content">
-                    neiron
+                    <div className="card_box">
+                        <div className="card_box_left"></div>
+                        <div className="card_box_right">
+                            <img src={boxPic} alt=""/>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
